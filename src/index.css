@@ -84,3 +84,37 @@
 .audio-wave-bar:nth-child(5) {
   animation-delay: 0.8s;
 }
+
+/* Tech nodes styling */
+.tech-node {
+  @apply text-jarvis-teal opacity-70;
+  filter: drop-shadow(0 0 6px rgba(51, 195, 240, 0.7));
+  transition: all 0.5s ease;
+}
+
+.tech-node.circuit {
+  @apply text-jarvis-blue;
+}
+
+.tech-node.zap {
+  @apply text-jarvis-accent;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+.tech-node svg {
+  animation: pulsate 3s ease-in-out infinite;
+}
